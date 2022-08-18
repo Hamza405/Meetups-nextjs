@@ -1,9 +1,16 @@
 import MeetupList from "../components/meetups/MeetupList";
+import Head from "next/head";
 import { MongoClient } from "mongodb";
 
 const HomePage = ( props ) => {
     console.log( 'generated' );
-    return <MeetupList meetups={ props.meetups } />;
+    return ( <>
+        <Head>
+            <title>Meetups</title>
+            <meta name="description" content="Browse out meetups" />
+        </Head>
+        <MeetupList meetups={ props.meetups } />
+    </> );
 
 };
 

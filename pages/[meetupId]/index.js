@@ -2,8 +2,7 @@ import MeetupsDetails from "../../components/meetups/MeetupDetails";
 import { MongoClient, ObjectId } from "mongodb";
 
 const DetailsPage = ( { meetup } ) => {
-    return <MeetupsDetails title={ meetup.title } image={ meetup.image } address={ meetup.address } description={ meetup.description }
-    />;
+    return <MeetupsDetails title={ meetup.title } image={ meetup.image } address={ meetup.address } description={ meetup.description } />;
 };
 
 export async function getStaticPaths () {
