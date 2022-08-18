@@ -18,9 +18,10 @@ export async function getStaticProps () {
         id: m._id.toString(),
         title: m.title,
         image: m.image,
-        address: m.address
-
+        address: m.address,
+        description: m.description
     } ) );
+    client.close();
 
     return {
         props: {
