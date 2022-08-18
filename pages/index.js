@@ -25,6 +25,7 @@ const data = [
 ];
 
 const HomePage = ( props ) => {
+    console.log( 'generated' );
     return <MeetupList meetups={ props.meetups } />;
 
 };
@@ -32,7 +33,8 @@ export async function getStaticProps () {
     return {
         props: {
             meetups: data
-        }
+        },
+        revalidate: 5
     };
 }
 export default HomePage;
